@@ -1,0 +1,6 @@
+{
+  "name": "Comics Craft",
+  "description": "AI Comic Story creator using Gemini models specializing in Indian historical epics, vintage graphic novels, and illustrated chronicles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

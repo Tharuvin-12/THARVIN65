@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --comic-paper: #FAF6ED;
+    --comic-ink: #14120E;
+    --comic-gold: #E5A93B;
+    --comic-saffron: #E26D16;
+    --comic-maroon: #831843;
+    --comic-yellow: #FACC15;
+  }
+}
+
+.font-comic {
+  font-family: 'Bangers', cursive, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-royal {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-hand {
+  font-family: 'Kalam', cursive;
+}
+
+/* Authentic Comic Ben-Day Halftone Background */
+.comic-halftone {
+  background-color: #FAF5E8;
+  background-image: radial-gradient(rgba(30, 24, 16, 0.12) 1.2px, transparent 1.2px);
+  background-size: 8px 8px;
+}
+
+.comic-halftone-dark {
+  background-color: #171410;
+  background-image: radial-gradient(rgba(240, 230, 210, 0.06) 1.2px, transparent 1.2px);
+  background-size: 8px 8px;
+}
+
+.comic-halftone-accent {
+  background-image: radial-gradient(rgba(226, 109, 22, 0.18) 1.5px, transparent 1.5px);
+  background-size: 6px 6px;
+}
+
+/* Comic Panel Inked Borders */
+.comic-panel-box {
+  border: 3.5px solid #14120E;
+  box-shadow: 6px 6px 0px #14120E;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.comic-panel-box:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px #14120E;
+}
+
+/* Comic Caption Header (Vintage Amar Chitra Katha yellow box) */
+.comic-caption-box {
+  background-color: #FEE028;
+  color: #11100D;
+  border: 2px solid #11100D;
+  box-shadow: 2px 2px 0px #11100D;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Dramatic SFX text with comic outline */
+.comic-sfx-text {
+  font-family: 'Bangers', cursive;
+  -webkit-text-stroke: 2px #000;
+  text-shadow: 3px 3px 0px #000, -2px -2px 0px #000;
+  display: inline-block;
+  transform: rotate(-4deg);
+}
+
+/* Speech Bubble pointers */
+.bubble-tail-bottom-left::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 10px solid #FFFFFF;
+}
+
+.bubble-tail-bottom-left::before {
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  left: 18px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 12px solid #14120E;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #1A1713;
+}
+::-webkit-scrollbar-thumb {
+  background: #383228;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E26D16;
+}
